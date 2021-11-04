@@ -12,7 +12,9 @@
       const urlParams = new URLSearchParams(window.location.search);
 
       var result = urlParams.get('myparameter'); // get query string
-      alert(result);
+      var iframeurl = "https://en.wikipedia.org/wiki/"+result;
+      var elem = document.getElementById('myiframe');
+      elem.src = iframeurl;
      });
   </script>
 </head>
@@ -22,7 +24,7 @@
     <h1>Vanilla JavaScript App</h1>
   </main>
   <br>
-  <iframe src="https://en.wikipedia.org/wiki/Main_Page" width="640" height="480">
+  <iframe id="myiframe" src="https://en.wikipedia.org/wiki/Main_Page" width="640" height="480">
 </body>
 
   alert("abc");
