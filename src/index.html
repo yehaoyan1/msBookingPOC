@@ -30,7 +30,7 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 url: endpoint,
-                data: jsonToPost,
+                data: JSON.stringify(jsonToPost),
                 success: function (response) {
                   alert("Success");
                 }
@@ -40,9 +40,9 @@
         })*/
 
         $.post(endpoint,   // url
-                jsonToPost, // data to be submit
-                function(data, status, jqXHR) {// success callback
-                    $('p').append('status: ' + status + ', data: ' + data);
+              JSON.stringify(jsonToPost), // data to be submit
+                function(jsonToPost, status, jqXHR) {// success callback
+                  alert('status: ' + status + ', data: ' + jsonToPost);
                 }
         )
        
