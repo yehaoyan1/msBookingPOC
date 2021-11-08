@@ -28,7 +28,7 @@
           BookingID: result,
         }
 
-        alert(JSON.stringify(jsonToPost));
+        //alert(JSON.stringify(jsonToPost));
         $.ajax({
 				        type: "POST",
                 contentType: "application/json; charset=utf-8",
@@ -36,11 +36,11 @@
                 url: endpoint,
                 data: JSON.stringify(jsonToPost),
                 success: function (response) {
-                  alert("Success");
+                  alert(response );
                 },
-                error: function(xhr, status, error) {
-                  var err = eval(xhr.responseText);
-                  alert(err.Message);
+                error: function(response) {
+                  
+                  alert(response);
                 }
 		    });
         /*$.post(endpoint,jsonToPost,function(jsonToPost,status){
