@@ -29,23 +29,18 @@
         }
 
         //alert(JSON.stringify(jsonToPost));
-        $.ajax({
+       /* $.ajax({
 				        type: "POST",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 url: endpoint,
                 data: JSON.stringify(jsonToPost),
-                success: function (response) {
-                  alert(response );
-                },
-                error: function(response) {
-                  
-                  alert(response);
-                }
-		    });
-        /*$.post(endpoint,jsonToPost,function(jsonToPost,status){
+                success: success
+		    });*/
+        var dataIN= JSON.stringify(jsonToPost);
+        $.post(endpoint,dataIN,function(data,status){
           alert(status);
-        })*/
+        })
 
        
        
