@@ -29,21 +29,26 @@
         }
 
         //alert(JSON.stringify(jsonToPost));
-       /* $.ajax({
+        $.ajax({
 				        type: "POST",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 url: endpoint,
                 data: JSON.stringify(jsonToPost),
-                success: success
-		    });*/
-        var dataIN= JSON.stringify(jsonToPost);
+                success: function (data, status, xhr) {// success callback function
+                             alert(status);
+                          },
+                error:  function (jqXhr, textStatus, errorMessage) { // error callback 
+                            alert('Error: ' + errorMessage);
+                        }
+		    });
+        /*var dataIN= JSON.stringify(jsonToPost);
         $.post(endpoint,
                 dataIN,
                 function(data,status){
                     alert(status);
                 }
-              )
+              )*/
 
      }
   </script>
