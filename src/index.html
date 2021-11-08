@@ -9,14 +9,15 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script>
      $(document).ready(function() {
-      /*const urlParams = new URLSearchParams(window.location.search);
-
-      var result = urlParams.get('myparameter'); // get query string
-      var iframeurl = "https://en.wikipedia.org/wiki/"+result;
-      var elem = document.getElementById('myiframe');
-      elem.src = iframeurl;*/
+      const urlParams = new URLSearchParams(window.location.search);
+      const msbookingURL = "https://outlook.office365.com/owa/calendar/Contoso@CRM110284.onmicrosoft.com/bookings/";
+      //msBookingId=nsQywgIDi0-WBCZoHK75rw2
+      var result = urlParams.get('msBookingId'); // get query string
+      var iframeurl = msbookingURL+result;
+      var elem = document.getElementById('bookingIframe');
+      elem.src = iframeurl;
      });
-
+     
      function callTriggerUpdate(){
         alert("call Logic apps here");
         
@@ -32,8 +33,7 @@
   <button onclick='callTriggerUpdate()'>call logic apps</button>   
   <br>
   <!--<iframe id="myiframe" src="https://outlook.office.com/bookings/calendar" width="640" height="480">-->
-    <iframe id="bookingIframe" src="https://outlook.office365.com/owa/calendar/Contoso@CRM110284.onmicrosoft.com/bookings/" width="1024" height="480"></iframe>
-    <iframe id="officeCalendarIframe" src="https://outlook.office365.com/owa/calendar/889c8c51b40e4ec799d968595f3f392f@CRM110284.OnMicrosoft.com/17e8861aedd84397910ffe0b6436f23a8010623267881594358/calendar.html" width="1024" height="480"></iframe>
+    <iframe id="bookingIframe" src="" width="1024" height="480"></iframe>
     
 </body>
 </html>
