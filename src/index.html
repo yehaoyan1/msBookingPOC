@@ -37,6 +37,10 @@
                 data: JSON.stringify(jsonToPost),
                 success: function (response) {
                   alert("Success");
+                },
+                error: function(xhr, status, error) {
+                  var err = eval(xhr.responseText);
+                  alert(err.Message);
                 }
 		    });
         /*$.post(endpoint,jsonToPost,function(jsonToPost,status){
