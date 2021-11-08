@@ -41,8 +41,8 @@
 
         $.post(endpoint,   // url
               JSON.stringify(jsonToPost), // data to be submit
-                function(jsonToPost, status, jqXHR) {// success callback
-                  alert('status: ' + status + ', data: ' + jsonToPost);
+                function(data, status, jqXHR) {// success callback
+                  alert('status: ' + status + ', data: ' + data);
                 }
         )
        
