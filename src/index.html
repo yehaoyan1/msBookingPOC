@@ -38,12 +38,13 @@
                 success: success
 		    });*/
         var dataIN= JSON.stringify(jsonToPost);
-        $.post(endpoint,dataIN,function(data,status){
-          alert(status);
-        })
+        $.post(endpoint,
+                dataIN,
+                function(data,status){
+                    alert(status);
+                }
+              )
 
-       
-       
      }
   </script>
 </head>
