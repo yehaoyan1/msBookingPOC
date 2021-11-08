@@ -39,12 +39,16 @@
                 dataType: "json",
                 url: endpoint,
                 data: jsonToPost,
-                success: function (data, status, xhr) {// success callback function
+                /*success: function (data, status, xhr) {
                              alert(status);
                           },
-                error:  function (jqXhr, textStatus, errorMessage) { // error callback 
+                error:  function (jqXhr, textStatus, errorMessage) {
                             alert('Error: ' + errorMessage);
-                        }
+                        }*/
+                statusCode: {
+                  202: alert("Success"),
+                  403: alert("Error")
+                }
 		    });
         /*var dataIN= JSON.stringify(jsonToPost);
         $.post(endpoint,
