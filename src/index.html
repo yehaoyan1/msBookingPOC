@@ -39,19 +39,10 @@
                   alert(err.Message);
                 }
 		    });*/
-        /*$.post(endpoint,jsonToPost,function(jsonToPost,status){
+        $.post(endpoint,jsonToPost,function(jsonToPost,status){
           alert(status);
-        })*/
-        $.ajax({
-            type: 'post',
-            url: endpoint,
-            data: JSON.stringify(jsonToPost),
-            contentType: "application/json; charset=utf-8",
-            traditional: true,
-            success: function (data,status) {
-              alert(status);
-            }
-        });
+        })
+       
      }
   </script>
 </head>
