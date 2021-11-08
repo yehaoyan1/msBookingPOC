@@ -29,13 +29,13 @@
           "BookingID": "abc",
         }
 
-        alert(JSON.parse(jsonToPost));
+        //alert(jsonToPost);
         $.ajax({
 				        type: "POST",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 url: endpoint,
-                data: JSON.parse(jsonToPost),
+                data: jsonToPost,
                 success: function (data, status, xhr) {// success callback function
                              alert(status);
                           },
