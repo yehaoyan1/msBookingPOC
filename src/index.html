@@ -11,7 +11,7 @@
      $(document).ready(function() {
 
       const urlParams = new URLSearchParams(window.location.search);
-      const msbookingURL = "https://outlook.office365.com/owa/calendar/Contoso@CRM110284.onmicrosoft.com/bookings/";
+      const msbookingURL = "https://outlook.office365.com/owa/calendar/PartnersLife@danielnimmopartnerslifeco.onmicrosoft.com/bookings//";
       //msBookingId=nsQywgIDi0-WBCZoHK75rw2
       var result = urlParams.get('msBookingId'); // get query string
       var iframeurl = msbookingURL+result;
@@ -73,7 +73,7 @@
   </main>
   <br>
   <div class="myContainer">
-  <button onclick='callTriggerUpdate()' class="myButton">Logic App Action</button>   
+  <button onclick='callTriggerUpdate()' class="myButton">Request Callback</button>   
   </div>
   <br>
   <br>
