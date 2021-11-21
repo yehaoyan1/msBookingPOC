@@ -9,6 +9,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
      $(document).ready(function() {
+      document.getElementById("headerImg").src = "partnerslifeHeader.JPG";
       const urlParams = new URLSearchParams(window.location.search);
       const msbookingURL = "https://outlook.office365.com/owa/calendar/Contoso@CRM110284.onmicrosoft.com/bookings/";
       //msBookingId=nsQywgIDi0-WBCZoHK75rw2
@@ -65,12 +66,13 @@
   </script>
 </head>
 
-<body style="background-color: #3a5660;">
+<body style="background-color: #3a5660;height: 100%;">
   <main>
-    <div><img scr="partnerslifeHeader.JPG"></img></div>      
-    <h1 style="color: #e2eeef;">partner's life<h1>
+    <div><img id="headerImg"></img></div>      
+    <h1 style="color: #ffffff;">Partners Life<h1>
   </main>
   <br>
+  <div style="width: 100%;text-align: center;">
   <button onclick='callTriggerUpdate()' style="box-shadow:inset 0px 1px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
 	background-color:#ffffff;
@@ -85,9 +87,11 @@
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;">Logic App Action</button>   
+  </div>
+  <br>
   <br>
   <!--<iframe id="myiframe" src="https://outlook.office.com/bookings/calendar" width="640" height="480">-->
-    <iframe id="bookingIframe" src="" width="1024" height="480"></iframe>
+  <div style="width: 100%; text-align: center;"><iframe id="bookingIframe" src="" width="1024" height="480"></iframe></div>
     
 </body>
 </html>
