@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Partners Life Booking</title>
+  <title>msBookingPOC js App</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
      $(document).ready(function() {
 
       const urlParams = new URLSearchParams(window.location.search);
-      const msbookingURL = "https://outlook.office365.com/owa/calendar/PartnersLife@danielnimmopartnerslifeco.onmicrosoft.com/bookings/";
+      const msbookingURL = "https://outlook.office365.com/owa/calendar/Contoso@CRM110284.onmicrosoft.com/bookings/";
       //msBookingId=nsQywgIDi0-WBCZoHK75rw2
       var result = urlParams.get('msBookingId'); // get query string
       var iframeurl = msbookingURL+result;
