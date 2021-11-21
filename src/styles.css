@@ -51,4 +51,8 @@ main > h1 {
   width: 100%;
   text-align: center;
 }
+
+.headerImg{
+  content:url(https://yellow-mud-062f3a800.azurestaticapps.net/partnerslifeHeader.JPG);
+}
         
